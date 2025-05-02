@@ -12,20 +12,17 @@
     }
   },
   "hosting": {
-    "site": "md2doc-n8n-aemalsayer-docs",
     "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "rewrites": [
       {
-        "source": "/.well-known/acme-challenge/**",
-        "destination": "/.well-known/acme-challenge/**"
-      },
-      {
         "source": "**",
-        "function": {
-          "functionId": "mdToGoogleDoc",
-          "region": "us-central1"
-        }
+        "destination": "/index.html"
       }
     ]
   }
-} 
+}
